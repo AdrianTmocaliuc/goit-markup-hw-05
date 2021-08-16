@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>HomeWork4</title>
+    <title>HomeWork5</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,9 +22,9 @@
                     <span class="webstudio-web">Web</span>Studio
                 </a>
                 <ul class="header-nav list">
-                    <li><a href="./index.html" class="link current">Студия</a></li>
-                    <li><a href="./portofolio.html" class="link">Портфолио</a></li>
-                    <li><a href="./contacts.html" class="link">Контакты</a></li>
+                    <li><a href="./index.html" class="header-link link current">Студия</a></li>
+                    <li><a href="./portofolio.html" class="header-link link">Портфолио</a></li>
+                    <li><a href="./contacts.html" class="header-link link">Контакты</a></li>
                 </ul>
             </nav>
             
@@ -53,7 +53,7 @@
       <section class="hero">
             <div class="container container-hero">
                 <h1 class="hero-main-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="button primary">Заказать услугу</button>
+                <button type="button" class="button primary" data-modal-open>Заказать услугу</button>
             </div>
         </section>
 
@@ -121,17 +121,32 @@
 
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="occupation-images list">
-                    <li>
+                    <li class="occupation-image-item">
                         <img src="./images/img (4).jpg" alt="Работа в процессе" width="370"
                             height="294">
+                        <div class="occupation-image-box">
+                            <p class="occupation-image-title">
+                                Десктопные приложения
+                            </p>
+                        </div>
                     </li>
-                    <li>
+                    <li class="occupation-image-item">
                         <img src="./images/img (5).jpg" alt="Работа в процессе" width="370"
                             height="294">
+                        <div class="occupation-image-box">
+                            <p class="occupation-image-title">
+                                Мобильные приложения
+                            </p>
+                        </div>
                     </li>
-                    <li>
+                    <li class="occupation-image-item">
                         <img src="./images/img (6).jpg" alt="Работа в процессе" width="370"
                             height="294">
+                        <div class="occupation-image-box">
+                            <p class="occupation-image-title">
+                                Дизайнерские решения
+                            </p>
+                        </div>
                     </li>
                 </ul>
             
@@ -155,28 +170,32 @@
                             
                             <ul class="social-list list">
                                 <li class="social-list-items">
-                                    <a href="" class="social-list-link link">
+                                    <a href="" class="social-list-link link" 
+                                        aria-label="instagram icon">
                                         <svg class="social-list-icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#icon-instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list-items">
-                                    <a href="" class="social-list-link link">
+                                    <a href="" class="social-list-link link" 
+                                        aria-label="twitter icon">
                                         <svg class="social-list-icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#icon-twitter"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list-items">
-                                    <a href="" class="social-list-link link">
+                                    <a href="" class="social-list-link link" 
+                                        aria-label="facebook icon">
                                         <svg class="social-list-icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#icon-facebook"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="social-list-items">
-                                    <a href="" class="social-list-link link">
+                                    <a href="" class="social-list-link link" 
+                                        aria-label="linkedin icon">
                                         <svg class="social-list-icon" width="20" height="20">
                                             <use href="./images/icons/sprite.svg#icon-linkedin"></use>
                                         </svg>
@@ -447,6 +466,16 @@
 
     </footer>
 
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-btn" data-modal-close>
+                <svg class="close-btn-icon" width="11" height="11">
+                    <use href="./images/icons/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
